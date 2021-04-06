@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amar-Bank</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div id="hide">
+        <div>
+            <h1 class="text-center">Welcome to Amar-Bank</h1>
+        </div>
+        <div class="login">
+            <h4>LOG IN</h4>
+            <br>
+            <input type="email" placeholder="Email" class="form-control">
+            <br>
+            <input type="password" placeholder="Password" class="form-control">
+            <br>
+            <button id="login" class="btn btn-success">Enter</button>
+        </div>
+    </div>
+</div>
+<div id="taka" class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="withdraw status">
+                <h1>deposite</h1>
+                <h5>$<span id="deposit">00</span></h5>
+            </div>
+            
+        </div>
+        <div class="col-md-4">
+            <div class="deposite status">
+                <h1>withdraw</h1>
+                <h5>00</h5>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="savings status">
+                 <h1>Total</h1>
+                 <h5>$<span id="totalbalance">1250</span></h5>
+            </div>
+        </div>
+    </div>
+    <div class="row last">
+        <div class="col-md-6">
+            <div class="login">
+                <h5>Deposit</h5>
+                <br>
+
+                <input id="captch1" class="form-control" type="text">
+                <br>
+                <button id="btndepo" class="btn btn-success">Deposit</button>
+            </div>
+          
+        </div>
+        <div class="col-md-6">
+            <div class="login">
+                <h5>withdraw</h5>
+                <br>
+
+                <input id="captch2" class="form-control" type="text">
+                <br>
+
+                <button id="btnwith" class="btn btn-success">withdraw</button>
+            </div>
+     
+        </div>
+    </div>
+</div>
+
+  <script>
+      //login part;
+      const bal = document.getElementById("login");
+      bal.addEventListener("click", function(){
+          const tuimor = document.getElementById("hide");
+          tuimor.style.display = "none";
+          const area = document.getElementById("taka");
+          area.style.display = "block";
+      });
+      //deposit part;
+      const ball = document.getElementById("btndepo");
+      ball.addEventListener("click", function() {
+          const catcher1 = document.getElementById("captch1").value;
+          const capture1number = parseFloat(catcher1);
+          console.log(capture1number);
+
+
+
+
+        //withdrow part;
+        const ball2 = document.getElementById("btnwith");
+        ball2.addEventListener("click", function(){
+            console.log("kaj kore to vai");
+            const capture2 = document.getElementById("captch2").value;
+            console.log(capture2);
+            //ai ta kaj kortace na;
+            const capture2number = parseFloat(capture2);
+            console.log(capture2number);
+        })
+        
+
+        //   const deposittext = document.getElementById("deposit").innerText;
+        //   const depositnumber = parseFloat(deposittext);
+        //   const jogfol = depositnumber + capture1number;
+        //   document.getElementById("deposit").innerText = jogfol;
+            autodone("deposit",capture1number);
+          autodone("totalbalance",capture1number);
+
+        // const totalbalancetext = document.getElementById("totalbalance").innerText;
+        // const totalbalancenumber = parseFloat(totalbalancetext);
+        // const finalbalance = totalbalancenumber + capture1number;
+        // document.getElementById("totalbalance").innerText = finalbalance;
+
+  
+      })
+      function autodone(id,capture1number){
+        const totalbalancetext = document.getElementById(id).innerText;
+        const totalbalancenumber = parseFloat(totalbalancetext);
+        const finalbalance = totalbalancenumber + capture1number;
+        document.getElementById(id).innerText = finalbalance;
+      }
+
+  </script>
+</body>
+</html>
