@@ -52,7 +52,7 @@
                 <h5>Deposit</h5>
                 <br>
 
-                <input id="captch1" class="form-control" type="text">
+                <input id="captch1" class="form-control" placeholder=" $ Amount you want to Deposit" type="text">
                 <br>
                 <button id="btndepo" class="btn btn-success">Deposit</button>
             </div>
@@ -63,7 +63,7 @@
                 <h5>withdraw</h5>
                 <br>
 
-                <input id="captch2" class="form-control" type="text">
+                <input id="captch2" class="form-control"  placeholder="$ Amount you want to withdraw " type="text">
                 <br>
 
                 <button id="btnwith" class="btn btn-success">withdraw</button>
@@ -98,23 +98,17 @@
             console.log("kaj kore to vai");
             const capture2 = document.getElementById("captch2").value;
             console.log(capture2);
-            //ai ta kaj kortace na;
+            
             const capture2number = parseFloat(capture2);
             console.log(capture2number);
         })
         
 
-        //   const deposittext = document.getElementById("deposit").innerText;
-        //   const depositnumber = parseFloat(deposittext);
-        //   const jogfol = depositnumber + capture1number;
-        //   document.getElementById("deposit").innerText = jogfol;
+        
             autodone("deposit",capture1number);
           autodone("totalbalance",capture1number);
 
-        // const totalbalancetext = document.getElementById("totalbalance").innerText;
-        // const totalbalancenumber = parseFloat(totalbalancetext);
-        // const finalbalance = totalbalancenumber + capture1number;
-        // document.getElementById("totalbalance").innerText = finalbalance;
+        
 
   
       })
