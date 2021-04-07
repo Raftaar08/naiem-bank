@@ -2,29 +2,26 @@ body{
     padding: 100px;
 }
 .login{
-    margin-top: 70px;
+    margin-top: 50px;
     border-radius: 10px;
-    padding: 30px;
+    padding: 40px;
     box-shadow: 5px 5px 10px gray;
 }
-#taka{
+#transaction-area{
     display: none;
 }
-.withdraw{
-    background-color: slateblue;
-}
-.deposite{
-    background-color: lightsalmon;
-}
-.savings{
-    background-color: lime;
-}
 .status{
-    margin: 0px 10px;
-    color: white;
-    padding: 20px;
-    border-radius: 20px;
+margin: 0 20px;
+color: white;
+padding: 20px;
+border-radius: 10px;
 }
-.last{
-    margin-top: 100px;
+.deposit{
+background-color: slateblue;
+}
+.withdraw{
+background-color: lightsalmon;
+}
+.balance{
+background-color: orange;
 }
